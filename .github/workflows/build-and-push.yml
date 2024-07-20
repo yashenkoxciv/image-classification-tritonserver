@@ -24,6 +24,7 @@ jobs:
         run: |
             python3 --version
             python3 -m pip install gdown
+            pwd
             cd triton-repository/imagenet-classifier/1
             gdown 1LUetnezvb4W4L_A-tIvmPxp674x_n3ox
       -
