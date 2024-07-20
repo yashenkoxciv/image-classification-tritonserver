@@ -2,6 +2,8 @@ name: ci
 
 on:
   push:
+permissions:
+  contents: write
 
 jobs:
   docker:
