@@ -21,7 +21,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Download model file
-        run: python3 --version
+        run: |
+            python3 --version
+            python3 -m pip install gdown
+            cd triton-repository/imagenet-classifier/1
+            gdown 1LUetnezvb4W4L_A-tIvmPxp674x_n3ox
       -
         name: Build and push
         uses: docker/build-push-action@v6
