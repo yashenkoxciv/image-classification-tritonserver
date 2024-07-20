@@ -20,6 +20,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Download model file
+        run: python3 --version
+      -
         name: Build and push
         uses: docker/build-push-action@v6
         with:
